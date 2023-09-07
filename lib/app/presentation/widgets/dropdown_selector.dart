@@ -10,7 +10,6 @@ class DropdownSelector<T> extends StatelessWidget {
     this.onChanged,
   });
 
-  // final CompressionOption? contentType;
   final String? labelText;
   final T? value;
   final List<DropdownMenuItem<T>>? items;

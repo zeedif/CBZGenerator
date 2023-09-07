@@ -17,31 +17,46 @@ Consumer ContentTypeWidget(HomeController controller) {
             DropdownSelector(
               labelText: 'Content Type',
               value: contentType,
-              onChanged: (controller.onContentTypeChanged),
+              onChanged: controller.onContentTypeChanged,
               items: const [
                 DropdownMenuItem(
                   value: CompressionOption.none,
-                  child: Text('Images'),
+                  child: Text('Images', overflow: TextOverflow.ellipsis),
                 ),
                 DropdownMenuItem(
                   value: CompressionOption.sevenZ,
-                  child: Text('7Z / CB7'),
+                  child: Text(
+                    '7Z / CB7',
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
                 DropdownMenuItem(
                   value: CompressionOption.ace,
-                  child: Text('ACE / CBA'),
+                  child: Text(
+                    'ACE / CBA',
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
                 DropdownMenuItem(
                   value: CompressionOption.rar,
-                  child: Text('RAR / CBR'),
+                  child: Text(
+                    'RAR / CBR',
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
                 DropdownMenuItem(
                   value: CompressionOption.tar,
-                  child: Text('TAR / CBT'),
+                  child: Text(
+                    'TAR / CBT',
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
                 DropdownMenuItem(
                   value: CompressionOption.zip,
-                  child: Text('ZIP / CBZ'),
+                  child: Text(
+                    'ZIP / CBZ',
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
               ],
             ),

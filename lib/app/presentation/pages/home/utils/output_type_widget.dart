@@ -44,17 +44,28 @@ Consumer OutputTypeWidget(HomeController controller) {
                   value: OutputType.same,
                   child: contentType != CompressionOption.none &&
                           contentType != null
-                      ? const Text('Same as input')
-                      : const Text('Same as compression'),
+                      ? const Text(
+                          'Same as input',
+                          overflow: TextOverflow.ellipsis,
+                        )
+                      : const Text(
+                          'Same as compression',
+                          overflow: TextOverflow.ellipsis,
+                        ),
                 ),
-                // if (customExtension.isNotEmpty)
                 DropdownMenuItem(
                   value: OutputType.custom,
-                  child: Text(customExtension),
+                  child: Text(
+                    customExtension,
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
                 const DropdownMenuItem(
                   value: OutputType.mobi,
-                  child: Text('MOBI'),
+                  child: Text(
+                    'MOBI',
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
               ],
             ),

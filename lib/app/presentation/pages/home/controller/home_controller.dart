@@ -73,10 +73,10 @@ class HomeController extends StateNotifier<HomeState> {
 
   void onInputTypeChanged(InputType? type) {
     state = state.copyWith(
-        inputType: type,
-        // outputType: null,
-        contentType: null,
-        compressionOption: null);
+      inputType: type,
+      contentType: null,
+      compressionOption: null,
+    );
   }
 
   void onContentTypeChanged(CompressionOption? option) {

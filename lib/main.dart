@@ -12,7 +12,7 @@ void main() {
   if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
     setWindowTitle('CBZ Generator');
     setWindowMaxSize(const Size(double.infinity, double.infinity));
-    setWindowMinSize(const Size(384, 300));
+    setWindowMinSize(const Size(300, 300));
   }
 
   runApp(const MyApp());
@@ -21,14 +21,13 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return ProviderListener(
       provider: snackbarProvider,
       builder: (_, controller) {
         return MaterialApp(
-          title: 'Flutter Demo',
+          title: 'CBZ Generator',
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,

@@ -11,7 +11,6 @@ class InputText extends StatefulWidget {
   final TextInputType? inputType;
   final bool isPassword;
   final String? Function(String?)? validator;
-  // final bool useAutocomplete;
   const InputText({
     super.key,
     this.onChanged,
@@ -22,7 +21,6 @@ class InputText extends StatefulWidget {
     this.inputType,
     this.isPassword = false,
     this.validator,
-    // this.useAutocomplete = false,
   });
 
   @override
@@ -33,8 +31,7 @@ class _InputTextState extends State<InputText> {
   late bool _obscureText;
   @override
   void initState() {
-    // _obscureText = widget.isPassword;
-    _obscureText = false;
+    _obscureText = widget.isPassword;
     super.initState();
   }
 
@@ -64,9 +61,7 @@ class _InputTextState extends State<InputText> {
                 }
               },
               decoration: InputDecoration(
-                border: const OutlineInputBorder(
-                    // borderSide: BorderSide.none,
-                    ),
+                border: const OutlineInputBorder(),
                 // errorText: state.hasError ? state.errorText : 'null',
                 contentPadding: const EdgeInsets.only(
                   top: 0,
@@ -94,7 +89,6 @@ class _InputTextState extends State<InputText> {
                       ),
                   ],
                 ),
-                // icon: widget.icon ?? const SizedBox.shrink(),
                 hintText: widget.label,
                 labelText: widget.label,
               ),

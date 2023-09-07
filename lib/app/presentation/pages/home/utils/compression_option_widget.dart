@@ -22,23 +22,23 @@ Consumer CompressionOptionWidget(HomeController controller) {
               items: const [
                 DropdownMenuItem(
                   value: CompressionOption.sevenZ,
-                  child: Text('7Z'),
+                  child: Text('7Z', overflow: TextOverflow.ellipsis),
                 ),
                 DropdownMenuItem(
                   value: CompressionOption.ace,
-                  child: Text('ACE'),
+                  child: Text('ACE', overflow: TextOverflow.ellipsis),
                 ),
                 DropdownMenuItem(
                   value: CompressionOption.rar,
-                  child: Text('RAR'),
+                  child: Text('RAR', overflow: TextOverflow.ellipsis),
                 ),
                 DropdownMenuItem(
                   value: CompressionOption.tar,
-                  child: Text('TAR'),
+                  child: Text('TAR', overflow: TextOverflow.ellipsis),
                 ),
                 DropdownMenuItem(
                   value: CompressionOption.zip,
-                  child: Text('ZIP'),
+                  child: Text('ZIP', overflow: TextOverflow.ellipsis),
                 ),
               ],
             ),
